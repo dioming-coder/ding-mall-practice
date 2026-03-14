@@ -51,22 +51,12 @@
 - **状态扩展性**：状态字段使用 TINYINT 而非 ENUM，预留业务扩展空间（如新增"预售"、"退款中"等状态）
 
 ## 🚀 项目结构
-ding-seckill/
-├── src/main/java/com/dingyaoming.dingseckill/
-│   ├── DingSeckillApplication.java    # 启动类（含@MapperScan）
-│   ├── entity/                        # 实体层
-│   │   └── User.java                  # 手写ORM映射（手动Getter/Setter）
-│   ├── mapper/                        # 数据访问层
-│   │   └── UserMapper.java            # 继承BaseMapper，理解动态代理
-│   ├── controller/                    # 控制层
-│   │   ├── HelloController.java       # Day1测试
-│   │   └── UserController.java        # Day2用户增查接口（已打通数据库）
-│   └── service/                       # 业务层（Day3填充）
-├── src/main/resources/
-│   └── application.yml                # MySQL连接配置
-├── sql/
-│   └── schema.sql                     # 6张表完整脚本（手写）
-└── README.md                          # 本文件
+标准 Maven 项目结构：
+- 启动类：com.dingyaoming.dingseckill.DingSeckillApplication
+- 实体层：entity/User.java
+- 数据层：mapper/UserMapper.java
+- 控制层：controller/UserController.java
+- 配置：resources/application.yml
 
 
 ## 📝 学习日志
